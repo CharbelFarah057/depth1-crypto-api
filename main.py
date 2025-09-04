@@ -9,3 +9,4 @@ def create_app() -> FastAPI:
 
 
 app = create_app()
+# Run with: python -m uvicorn main:app --reload
