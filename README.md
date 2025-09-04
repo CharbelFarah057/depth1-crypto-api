@@ -3,7 +3,7 @@
 Built an HTTP API with 4 endpoints that handle JSON payloads for encryption, decryption, signing, and verification operations.
 
 ## Set Up
-Create a `.env` file to insert you key HMAC signing key. The key will be labeled as `SIGNER_KEY`
+Create a `.env` file to insert you HMAC signing key. The key will be labeled as `SIGNER_KEY`
 The API won't start without creating a key. No default key will be assigned to the API.
 
 ## Run the server
@@ -15,7 +15,9 @@ python -m uvicorn main:app --reload
 ## Run Unittest
 Unittest were written with the python `unittest` lib. 
 To run all test use the command `python -m unittest -v`
+
 To run an individual test, use the command `python -m unittest <test> -v`
+
 For example `python -m unittest tests/test_signers.py -v`
 
 ## Endpoints
