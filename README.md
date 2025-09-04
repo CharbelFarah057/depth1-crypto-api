@@ -1,10 +1,12 @@
-# Riot Take-Home Technical Challenge
-
 ## Overview
 
-This challenge requires you to build an HTTP API with 4 endpoints that handle JSON payloads for encryption, decryption, signing, and verification operations.
+Built an HTTP API with 4 endpoints that handle JSON payloads for encryption, decryption, signing, and verification operations.
 
-## Requirements
+## Set Up
+Create a `.env` file to insert you key HMAC signing key. The key will be labeled as `SIGNER_KEY`
+The API won't start without creating a key. No default key will be assigned to the API.
+
+## Endpoints
 
 ### 1. Encryption Endpoint (`/encrypt`)
 
@@ -210,7 +212,3 @@ Output: 400 HTTP response
 1. **Abstraction**: The encryption algorithm (Base64) in the `/encrypt` and `/decrypt` endpoints should be easily replaceable with another algorithm without significant changes to the codebase. Design your solution with appropriate abstractions. The same principle applies to the signature algorithm used in the `/sign` and `/verify` endpoints.
 
 2. **Consistency**: Ensure that `/encrypt` followed by `/decrypt` returns the original payload. Ensure that a payload signed with `/sign` can be successfully verified with `/verify`.
-
-## Submission
-
-Please submit your completed project by sending your GitHub repository link to louis@tryriot.com.
